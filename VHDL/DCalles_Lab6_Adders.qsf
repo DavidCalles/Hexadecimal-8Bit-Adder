@@ -1,0 +1,129 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 20:21:21  July 14, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		DCalles_Lab6_Adders_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY DCalles_Lab6_Adders
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:21:21  JULY 14, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VHDL_FILE SevenSegments.vhd
+set_global_assignment -name VHDL_FILE Memory16Bits.vhd
+set_global_assignment -name VHDL_FILE HalfAdder.vhd
+set_global_assignment -name VHDL_FILE FullAdder.vhd
+set_global_assignment -name VHDL_FILE DFF_David.vhd
+set_global_assignment -name VHDL_FILE Adder8Bits.vhd
+set_global_assignment -name VHDL_FILE DCalles_Lab6_Adders.vhd
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Keypad -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity Keypad -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity Keypad -section_id Top
+set_location_assignment PIN_Y16 -to reset
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AE26 -to segmentSumR[0]
+set_location_assignment PIN_AH28 -to segmentSumR[6]
+set_location_assignment PIN_AG28 -to segmentSumR[5]
+set_location_assignment PIN_AF28 -to segmentSumR[4]
+set_location_assignment PIN_AG27 -to segmentSumR[3]
+set_location_assignment PIN_AE28 -to segmentSumR[2]
+set_location_assignment PIN_AE27 -to segmentSumR[1]
+set_location_assignment PIN_AE12 -to selector
+set_location_assignment PIN_AA14 -to activate
+set_location_assignment PIN_AD27 -to segmentSumL[6]
+set_location_assignment PIN_AF30 -to segmentSumL[5]
+set_location_assignment PIN_AF29 -to segmentSumL[4]
+set_location_assignment PIN_AG30 -to segmentSumL[3]
+set_location_assignment PIN_AH30 -to segmentSumL[2]
+set_location_assignment PIN_AH29 -to segmentSumL[1]
+set_location_assignment PIN_AJ29 -to segmentSumL[0]
+set_location_assignment PIN_W17 -to carryOut
+set_location_assignment PIN_AC9 -to input8[7]
+set_location_assignment PIN_AE11 -to input8[6]
+set_location_assignment PIN_AD12 -to input8[5]
+set_location_assignment PIN_AD11 -to input8[4]
+set_location_assignment PIN_AF10 -to input8[3]
+set_location_assignment PIN_AF9 -to input8[2]
+set_location_assignment PIN_AC12 -to input8[1]
+set_location_assignment PIN_AB12 -to input8[0]
+set_location_assignment PIN_AA25 -to segmentL1[6]
+set_location_assignment PIN_AA26 -to segmentL1[5]
+set_location_assignment PIN_AB26 -to segmentL1[4]
+set_location_assignment PIN_AB27 -to segmentL1[3]
+set_location_assignment PIN_Y27 -to segmentL1[2]
+set_location_assignment PIN_AA28 -to segmentL1[1]
+set_location_assignment PIN_V25 -to segmentL1[0]
+set_location_assignment PIN_W25 -to segmentL2[6]
+set_location_assignment PIN_V23 -to segmentL2[5]
+set_location_assignment PIN_W24 -to segmentL2[4]
+set_location_assignment PIN_W22 -to segmentL2[3]
+set_location_assignment PIN_Y24 -to segmentL2[2]
+set_location_assignment PIN_Y23 -to segmentL2[1]
+set_location_assignment PIN_AA24 -to segmentL2[0]
+set_location_assignment PIN_AB22 -to segmentR1[6]
+set_location_assignment PIN_AB25 -to segmentR1[5]
+set_location_assignment PIN_AB28 -to segmentR1[4]
+set_location_assignment PIN_AC25 -to segmentR1[3]
+set_location_assignment PIN_AD25 -to segmentR1[2]
+set_location_assignment PIN_AC27 -to segmentR1[1]
+set_location_assignment PIN_AD26 -to segmentR1[0]
+set_location_assignment PIN_AC30 -to segmentR2[6]
+set_location_assignment PIN_AC29 -to segmentR2[5]
+set_location_assignment PIN_AD30 -to segmentR2[4]
+set_location_assignment PIN_AC28 -to segmentR2[3]
+set_location_assignment PIN_AD29 -to segmentR2[2]
+set_location_assignment PIN_AE29 -to segmentR2[1]
+set_location_assignment PIN_AB23 -to segmentR2[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Keypad -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

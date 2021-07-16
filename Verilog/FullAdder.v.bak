@@ -1,0 +1,45 @@
+// FullAdder.vhd
+
+/************************************************************************
+--	Description: Combinatory definition of a full adder
+--
+--	Inputs: 	In1; 1 bit first input.   
+--				In2; 1 bit second input.
+--				InC; 1 bit third input (from carry).
+
+--	
+--	Outputs: R;	1 bit result from sum.
+--				OutC; 1 bit carry from sum.
+--**********************************************************************/
+
+
+
+// Module declaration
+
+entity FullAdder(
+			input In1,    
+         input In2,
+			input InC,    
+         output R,
+			output OutC);
+			
+
+end FullAdder;
+
+-- Architecture definition
+
+architecture RTL of FullAdder is
+
+begin
+	
+--------------------------------------------------------------------------
+-------------------------- ARCHITECTURE LOGIC ----------------------------
+--------------------------------------------------------------------------
+
+R <= (In1 and In2 and InC) or (In1 and (not In2) and (not InC)) or 
+		(In2 and (not In1) and (not InC)) or (InC and (not In1) and (not In2));
+
+OutC <= (In1 and In2) or (In2 and InC) or (InC and In1);
+
+
+end;

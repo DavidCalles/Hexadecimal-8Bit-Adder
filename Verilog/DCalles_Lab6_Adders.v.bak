@@ -1,0 +1,135 @@
+//-- DCalles_Lab6_Adders.v
+
+--***********************************************************************
+--	Description: 
+--	
+--	Inputs: 	
+--	
+--	Outputs: 
+--***********************************************************************
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_STD.ALL;
+USE IEEE.std_logic_arith.ALL;
+
+-- Entity declaration
+
+entity Dcalles_Lab6_Adders is
+
+    port(clk 			: in std_logic;
+			reset			: in std_logic;
+			selector		: in std_logic;
+			activate		: in std_logic;
+			input8		: in std_logic_vector(7 downto 0);
+			
+         segmentL1	: out std_logic_vector(6 downto 0);
+			segmentL2	: out std_logic_vector(6 downto 0);
+			
+			segmentR1	: out std_logic_vector(6 downto 0);
+			segmentR2	: out std_logic_vector(6 downto 0);
+			
+			segmentSumL	: out std_logic_vector(6 downto 0);
+			segmentSumR	: out std_logic_vector(6 downto 0);
+			carryOut		: out std_logic
+			);
+
+end Dcalles_Lab6_Adders;
+
+-- Architecture definition
+
+architecture Behavioral of Dcalles_Lab6_Adders is
+
+--------------------------------------------------------------------------
+---------------- COMPONENTS DEFINED IN SEPARATE FILES --------------------
+--------------------------------------------------------------------------
+	
+	-- Integer to 7segment decoder
+	COMPONENT SevenSegments 
+		PORT ( binNumber : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+				 segmentLed : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+	END COMPONENT;
+	
+	-- 8 Bits adder
+	COMPONENT Adder8Bits 
+	   PORT ( InA	: in std_logic_vector(7 downto 0);    
+				 InB	: in std_logic_vector(7 downto 0);   
+				 R		: out std_logic_vector(8 downto 0));
+	END COMPONENT;
+	
+	-- Memory block
+	COMPONENT Memory16Bits 
+		port( clock			: in std_logic;
+				reset			: in std_logic;
+				numIn 		: in std_logic_vector(7 downto 0);
+				selector		: in std_logic;
+				activate		: in std_logic;
+				storedVals 	: out std_logic_vector(15 downto 0));
+	END COMPONENT;
+--------------------------------------------------------------------------
+------------------------- INTERMEDIATE SIGNALS ---------------------------
+--------------------------------------------------------------------------
+	
+	signal segmentL1Signal		: std_logic_vector(6 downto 0);
+	signal segmentL2Signal		: std_logic_vector(6 downto 0);
+	
+	signal segmentR1Signal		: std_logic_vector(6 downto 0);
+	signal segmentR2Signal		: std_logic_vector(6 downto 0);
+	
+	signal segmentSumLSignal	: std_logic_vector(6 downto 0);
+	signal segmentSumRSignal	: std_logic_vector(6 downto 0);
+	
+	signal memorySignal			: std_logic_vector(15 downto 0);
+	signal resultSignal			: std_logic_vector(8 downto 0);
+	
+
+begin
+
+--------------------------------------------------------------------------
+-------------------------- COMPONENTS MAPPING ----------------------------
+--------------------------------------------------------------------------	
+	
+	-- 7 segmentL1
+	SevenSegmentsL1 : SevenSegments
+	PORT MAP(memorySignal(15 downto 12), segmentL1Signal);	
+	
+	-- 7 segmentL2
+	SevenSegmentsL2 : SevenSegments
+	PORT MAP(memorySignal(11 downto 8), segmentL2Signal);
+	
+	-- 7 segmentR1
+	SevenSegmentsR1 : SevenSegments
+	PORT MAP(memorySignal(7 downto 4), segmentR1Signal);
+
+	-- 7 segmentR1
+	SevenSegmentsR2 : SevenSegments
+	PORT MAP(memorySignal(3 downto 0), segmentR2Signal);
+	
+	-- 7 segmentSumL 
+	SevenSegmentsSumL : SevenSegments
+	PORT MAP(resultSignal(7 downto 4), segmentSumLSignal);
+	
+	-- 7 segmentSumR 
+	SevenSegmentsSumR : SevenSegments
+	PORT MAP(resultSignal(3 downto 0), segmentSumRSignal);
+
+	-- Memory to store both sum inputs
+	Memory16Bits1	: Memory16Bits
+	PORT MAP(clk, reset, input8, selector, activate, memorySignal);
+	
+	-- 8-bit adder made of 1 half adder and 7 full adders
+	Adder8Bits1		: Adder8Bits
+	PORT MAP(memorySignal(15 downto 8), memorySignal(7 downto 0), resultSignal);
+
+	-- outputs
+	segmentL1 <= segmentL1Signal;
+	segmentL2 <= segmentL2Signal;
+	segmentR1 <= segmentR1Signal;
+	segmentR2 <= segmentR2Signal;
+	
+	segmentSumR <= segmentSumRSignal;
+	segmentSumL <= segmentSumLSignal;
+	
+	carryOut <= resultSignal(8);
+
+end;

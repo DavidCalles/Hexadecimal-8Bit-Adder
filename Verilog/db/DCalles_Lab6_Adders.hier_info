@@ -1,0 +1,521 @@
+|DCalles_Lab6_Adders
+clk => clk.IN1
+reset => reset.IN1
+selector => selector.IN1
+activate => activate.IN1
+input8[0] => input8[0].IN1
+input8[1] => input8[1].IN1
+input8[2] => input8[2].IN1
+input8[3] => input8[3].IN1
+input8[4] => input8[4].IN1
+input8[5] => input8[5].IN1
+input8[6] => input8[6].IN1
+input8[7] => input8[7].IN1
+memoryOut[0] <= memorySignal[0].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[1] <= memorySignal[1].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[2] <= memorySignal[2].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[3] <= memorySignal[3].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[4] <= memorySignal[4].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[5] <= memorySignal[5].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[6] <= memorySignal[6].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[7] <= memorySignal[7].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[8] <= memorySignal[8].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[9] <= memorySignal[9].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[10] <= memorySignal[10].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[11] <= memorySignal[11].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[12] <= memorySignal[12].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[13] <= memorySignal[13].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[14] <= memorySignal[14].DB_MAX_OUTPUT_PORT_TYPE
+memoryOut[15] <= memorySignal[15].DB_MAX_OUTPUT_PORT_TYPE
+segmentL1[0] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[1] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[2] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[3] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[4] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[5] <= SevenSegments:SevenSegmentsL1.port1
+segmentL1[6] <= SevenSegments:SevenSegmentsL1.port1
+segmentL2[0] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[1] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[2] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[3] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[4] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[5] <= SevenSegments:SevenSegmentsL2.port1
+segmentL2[6] <= SevenSegments:SevenSegmentsL2.port1
+segmentR1[0] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[1] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[2] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[3] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[4] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[5] <= SevenSegments:SevenSegmentsR1.port1
+segmentR1[6] <= SevenSegments:SevenSegmentsR1.port1
+segmentR2[0] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[1] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[2] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[3] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[4] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[5] <= SevenSegments:SevenSegmentsR2.port1
+segmentR2[6] <= SevenSegments:SevenSegmentsR2.port1
+segmentSumL[0] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[1] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[2] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[3] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[4] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[5] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumL[6] <= SevenSegments:SevenSegmentsSumL.port1
+segmentSumR[0] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[1] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[2] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[3] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[4] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[5] <= SevenSegments:SevenSegmentsSumR.port1
+segmentSumR[6] <= SevenSegments:SevenSegmentsSumR.port1
+carryOut <= Adder8Bits:Adder8Bits1.port2
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsL1
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsL2
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsR1
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsR2
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsSumL
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsSumR
+ones[0] => Decoder0.IN3
+ones[1] => Decoder0.IN2
+ones[2] => Decoder0.IN1
+ones[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1
+clock => clock.IN16
+reset => resetSignal.IN16
+selector => enable1.IN0
+selector => enable2.IN0
+activate => enable1.IN1
+activate => enable2.IN1
+numIn[0] => dSign[0].IN2
+numIn[1] => dSign[1].IN2
+numIn[2] => dSign[2].IN2
+numIn[3] => dSign[3].IN2
+numIn[4] => dSign[4].IN2
+numIn[5] => dSign[5].IN2
+numIn[6] => dSign[6].IN2
+numIn[7] => dSign[7].IN2
+storedVals[0] <= DFF_David:DFF0.port5
+storedVals[1] <= DFF_David:DFF1.port5
+storedVals[2] <= DFF_David:DFF2.port5
+storedVals[3] <= DFF_David:DFF3.port5
+storedVals[4] <= DFF_David:DFF4.port5
+storedVals[5] <= DFF_David:DFF5.port5
+storedVals[6] <= DFF_David:DFF6.port5
+storedVals[7] <= DFF_David:DFF7.port5
+storedVals[8] <= DFF_David:DFF8.port5
+storedVals[9] <= DFF_David:DFF9.port5
+storedVals[10] <= DFF_David:DFF10.port5
+storedVals[11] <= DFF_David:DFF11.port5
+storedVals[12] <= DFF_David:DFF12.port5
+storedVals[13] <= DFF_David:DFF13.port5
+storedVals[14] <= DFF_David:DFF14.port5
+storedVals[15] <= DFF_David:DFF15.port5
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF0
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF1
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF2
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF3
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF4
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF5
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF6
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF7
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF8
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF9
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF10
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF11
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF12
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF13
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF14
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF15
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1
+InA[0] => InA[0].IN1
+InA[1] => InA[1].IN1
+InA[2] => InA[2].IN1
+InA[3] => InA[3].IN1
+InA[4] => InA[4].IN1
+InA[5] => InA[5].IN1
+InA[6] => InA[6].IN1
+InA[7] => InA[7].IN1
+InB[0] => InB[0].IN1
+InB[1] => InB[1].IN1
+InB[2] => InB[2].IN1
+InB[3] => InB[3].IN1
+InB[4] => InB[4].IN1
+InB[5] => InB[5].IN1
+InB[6] => InB[6].IN1
+InB[7] => InB[7].IN1
+R[0] <= HalfAdder:HalfAdder0.port2
+R[1] <= FullAdder:FullAdder1.port3
+R[2] <= FullAdder:FullAdder2.port3
+R[3] <= FullAdder:FullAdder3.port3
+R[4] <= FullAdder:FullAdder4.port3
+R[5] <= FullAdder:FullAdder5.port3
+R[6] <= FullAdder:FullAdder6.port3
+R[7] <= FullAdder:FullAdder7.port3
+R[8] <= FullAdder:FullAdder7.port4
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|HalfAdder:HalfAdder0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => OutC.IN1
+In2 => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder1
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder2
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder3
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder4
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder5
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder6
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder7
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+

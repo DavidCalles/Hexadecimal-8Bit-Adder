@@ -1,0 +1,229 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "segmentL1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "carryOut",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "input8[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "selector",
+					"strict" : false
+				},
+				{
+					"name" : "activate",
+					"strict" : false
+				},
+				{
+					"name" : "input8[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

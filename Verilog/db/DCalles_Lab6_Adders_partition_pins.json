@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "memoryOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "memoryOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentL2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentR2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segmentSumR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input8[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "selector",
+					"strict" : false
+				},
+				{
+					"name" : "activate",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

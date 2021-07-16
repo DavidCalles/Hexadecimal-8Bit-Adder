@@ -1,0 +1,687 @@
+|DCalles_Lab6_Adders
+clk => Memory16Bits:Memory16Bits1.clock
+reset => Memory16Bits:Memory16Bits1.reset
+selector => Memory16Bits:Memory16Bits1.selector
+activate => Memory16Bits:Memory16Bits1.activate
+input8[0] => Memory16Bits:Memory16Bits1.numIn[0]
+input8[1] => Memory16Bits:Memory16Bits1.numIn[1]
+input8[2] => Memory16Bits:Memory16Bits1.numIn[2]
+input8[3] => Memory16Bits:Memory16Bits1.numIn[3]
+input8[4] => Memory16Bits:Memory16Bits1.numIn[4]
+input8[5] => Memory16Bits:Memory16Bits1.numIn[5]
+input8[6] => Memory16Bits:Memory16Bits1.numIn[6]
+input8[7] => Memory16Bits:Memory16Bits1.numIn[7]
+segmentL1[0] <= SevenSegments:SevenSegmentsL1.segmentLed[0]
+segmentL1[1] <= SevenSegments:SevenSegmentsL1.segmentLed[1]
+segmentL1[2] <= SevenSegments:SevenSegmentsL1.segmentLed[2]
+segmentL1[3] <= SevenSegments:SevenSegmentsL1.segmentLed[3]
+segmentL1[4] <= SevenSegments:SevenSegmentsL1.segmentLed[4]
+segmentL1[5] <= SevenSegments:SevenSegmentsL1.segmentLed[5]
+segmentL1[6] <= SevenSegments:SevenSegmentsL1.segmentLed[6]
+segmentL2[0] <= SevenSegments:SevenSegmentsL2.segmentLed[0]
+segmentL2[1] <= SevenSegments:SevenSegmentsL2.segmentLed[1]
+segmentL2[2] <= SevenSegments:SevenSegmentsL2.segmentLed[2]
+segmentL2[3] <= SevenSegments:SevenSegmentsL2.segmentLed[3]
+segmentL2[4] <= SevenSegments:SevenSegmentsL2.segmentLed[4]
+segmentL2[5] <= SevenSegments:SevenSegmentsL2.segmentLed[5]
+segmentL2[6] <= SevenSegments:SevenSegmentsL2.segmentLed[6]
+segmentR1[0] <= SevenSegments:SevenSegmentsR1.segmentLed[0]
+segmentR1[1] <= SevenSegments:SevenSegmentsR1.segmentLed[1]
+segmentR1[2] <= SevenSegments:SevenSegmentsR1.segmentLed[2]
+segmentR1[3] <= SevenSegments:SevenSegmentsR1.segmentLed[3]
+segmentR1[4] <= SevenSegments:SevenSegmentsR1.segmentLed[4]
+segmentR1[5] <= SevenSegments:SevenSegmentsR1.segmentLed[5]
+segmentR1[6] <= SevenSegments:SevenSegmentsR1.segmentLed[6]
+segmentR2[0] <= SevenSegments:SevenSegmentsR2.segmentLed[0]
+segmentR2[1] <= SevenSegments:SevenSegmentsR2.segmentLed[1]
+segmentR2[2] <= SevenSegments:SevenSegmentsR2.segmentLed[2]
+segmentR2[3] <= SevenSegments:SevenSegmentsR2.segmentLed[3]
+segmentR2[4] <= SevenSegments:SevenSegmentsR2.segmentLed[4]
+segmentR2[5] <= SevenSegments:SevenSegmentsR2.segmentLed[5]
+segmentR2[6] <= SevenSegments:SevenSegmentsR2.segmentLed[6]
+segmentSumL[0] <= SevenSegments:SevenSegmentsSumL.segmentLed[0]
+segmentSumL[1] <= SevenSegments:SevenSegmentsSumL.segmentLed[1]
+segmentSumL[2] <= SevenSegments:SevenSegmentsSumL.segmentLed[2]
+segmentSumL[3] <= SevenSegments:SevenSegmentsSumL.segmentLed[3]
+segmentSumL[4] <= SevenSegments:SevenSegmentsSumL.segmentLed[4]
+segmentSumL[5] <= SevenSegments:SevenSegmentsSumL.segmentLed[5]
+segmentSumL[6] <= SevenSegments:SevenSegmentsSumL.segmentLed[6]
+segmentSumR[0] <= SevenSegments:SevenSegmentsSumR.segmentLed[0]
+segmentSumR[1] <= SevenSegments:SevenSegmentsSumR.segmentLed[1]
+segmentSumR[2] <= SevenSegments:SevenSegmentsSumR.segmentLed[2]
+segmentSumR[3] <= SevenSegments:SevenSegmentsSumR.segmentLed[3]
+segmentSumR[4] <= SevenSegments:SevenSegmentsSumR.segmentLed[4]
+segmentSumR[5] <= SevenSegments:SevenSegmentsSumR.segmentLed[5]
+segmentSumR[6] <= SevenSegments:SevenSegmentsSumR.segmentLed[6]
+carryOut <= Adder8Bits:Adder8Bits1.R[8]
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsL1
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsL2
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsR1
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsR2
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsSumL
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|SevenSegments:SevenSegmentsSumR
+binNumber[0] => Mux0.IN19
+binNumber[0] => Mux1.IN19
+binNumber[0] => Mux2.IN19
+binNumber[0] => Mux3.IN19
+binNumber[0] => Mux4.IN19
+binNumber[0] => Mux5.IN19
+binNumber[0] => Mux6.IN19
+binNumber[1] => Mux0.IN18
+binNumber[1] => Mux1.IN18
+binNumber[1] => Mux2.IN18
+binNumber[1] => Mux3.IN18
+binNumber[1] => Mux4.IN18
+binNumber[1] => Mux5.IN18
+binNumber[1] => Mux6.IN18
+binNumber[2] => Mux0.IN17
+binNumber[2] => Mux1.IN17
+binNumber[2] => Mux2.IN17
+binNumber[2] => Mux3.IN17
+binNumber[2] => Mux4.IN17
+binNumber[2] => Mux5.IN17
+binNumber[2] => Mux6.IN17
+binNumber[3] => Mux0.IN16
+binNumber[3] => Mux1.IN16
+binNumber[3] => Mux2.IN16
+binNumber[3] => Mux3.IN16
+binNumber[3] => Mux4.IN16
+binNumber[3] => Mux5.IN16
+binNumber[3] => Mux6.IN16
+segmentLed[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmentLed[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1
+clock => DFF_David:DFF0.clock
+clock => DFF_David:DFF1.clock
+clock => DFF_David:DFF2.clock
+clock => DFF_David:DFF3.clock
+clock => DFF_David:DFF4.clock
+clock => DFF_David:DFF5.clock
+clock => DFF_David:DFF6.clock
+clock => DFF_David:DFF7.clock
+clock => DFF_David:DFF8.clock
+clock => DFF_David:DFF9.clock
+clock => DFF_David:DFF10.clock
+clock => DFF_David:DFF11.clock
+clock => DFF_David:DFF12.clock
+clock => DFF_David:DFF13.clock
+clock => DFF_David:DFF14.clock
+clock => DFF_David:DFF15.clock
+reset => DFF_David:DFF0.rst
+reset => DFF_David:DFF1.rst
+reset => DFF_David:DFF2.rst
+reset => DFF_David:DFF3.rst
+reset => DFF_David:DFF4.rst
+reset => DFF_David:DFF5.rst
+reset => DFF_David:DFF6.rst
+reset => DFF_David:DFF7.rst
+reset => DFF_David:DFF8.rst
+reset => DFF_David:DFF9.rst
+reset => DFF_David:DFF10.rst
+reset => DFF_David:DFF11.rst
+reset => DFF_David:DFF12.rst
+reset => DFF_David:DFF13.rst
+reset => DFF_David:DFF14.rst
+reset => DFF_David:DFF15.rst
+numIn[0] => DFF_David:DFF0.d
+numIn[0] => DFF_David:DFF8.d
+numIn[1] => DFF_David:DFF1.d
+numIn[1] => DFF_David:DFF9.d
+numIn[2] => DFF_David:DFF2.d
+numIn[2] => DFF_David:DFF10.d
+numIn[3] => DFF_David:DFF3.d
+numIn[3] => DFF_David:DFF11.d
+numIn[4] => DFF_David:DFF4.d
+numIn[4] => DFF_David:DFF12.d
+numIn[5] => DFF_David:DFF5.d
+numIn[5] => DFF_David:DFF13.d
+numIn[6] => DFF_David:DFF6.d
+numIn[6] => DFF_David:DFF14.d
+numIn[7] => DFF_David:DFF7.d
+numIn[7] => DFF_David:DFF15.d
+selector => enable1.IN0
+selector => enable2.IN0
+activate => enable1.IN1
+activate => enable2.IN1
+storedVals[0] <= DFF_David:DFF0.q
+storedVals[1] <= DFF_David:DFF1.q
+storedVals[2] <= DFF_David:DFF2.q
+storedVals[3] <= DFF_David:DFF3.q
+storedVals[4] <= DFF_David:DFF4.q
+storedVals[5] <= DFF_David:DFF5.q
+storedVals[6] <= DFF_David:DFF6.q
+storedVals[7] <= DFF_David:DFF7.q
+storedVals[8] <= DFF_David:DFF8.q
+storedVals[9] <= DFF_David:DFF9.q
+storedVals[10] <= DFF_David:DFF10.q
+storedVals[11] <= DFF_David:DFF11.q
+storedVals[12] <= DFF_David:DFF12.q
+storedVals[13] <= DFF_David:DFF13.q
+storedVals[14] <= DFF_David:DFF14.q
+storedVals[15] <= DFF_David:DFF15.q
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF0
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF1
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF2
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF3
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF4
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF5
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF6
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF7
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF8
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF9
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF10
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF11
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF12
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF13
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF14
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Memory16Bits:Memory16Bits1|DFF_David:DFF15
+clock => q~reg0.CLK
+rst => q.OUTPUTSELECT
+pre => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1
+InA[0] => HalfAdder:HalfAdder0.In1
+InA[1] => FullAdder:FullAdder1.In1
+InA[2] => FullAdder:FullAdder2.In1
+InA[3] => FullAdder:FullAdder3.In1
+InA[4] => FullAdder:FullAdder4.In1
+InA[5] => FullAdder:FullAdder5.In1
+InA[6] => FullAdder:FullAdder6.In1
+InA[7] => FullAdder:FullAdder7.In1
+InB[0] => HalfAdder:HalfAdder0.In2
+InB[1] => FullAdder:FullAdder1.In2
+InB[2] => FullAdder:FullAdder2.In2
+InB[3] => FullAdder:FullAdder3.In2
+InB[4] => FullAdder:FullAdder4.In2
+InB[5] => FullAdder:FullAdder5.In2
+InB[6] => FullAdder:FullAdder6.In2
+InB[7] => FullAdder:FullAdder7.In2
+R[0] <= HalfAdder:HalfAdder0.R
+R[1] <= FullAdder:FullAdder1.R
+R[2] <= FullAdder:FullAdder2.R
+R[3] <= FullAdder:FullAdder3.R
+R[4] <= FullAdder:FullAdder4.R
+R[5] <= FullAdder:FullAdder5.R
+R[6] <= FullAdder:FullAdder6.R
+R[7] <= FullAdder:FullAdder7.R
+R[8] <= FullAdder:FullAdder7.OutC
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|HalfAdder:HalfAdder0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => OutC.IN1
+In2 => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder1
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder2
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder3
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder4
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder5
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder6
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DCalles_Lab6_Adders|Adder8Bits:Adder8Bits1|FullAdder:FullAdder7
+In1 => R.IN0
+In1 => R.IN0
+In1 => OutC.IN0
+In1 => R.IN0
+In1 => R.IN0
+In2 => R.IN1
+In2 => R.IN1
+In2 => OutC.IN0
+In2 => R.IN1
+In2 => R.IN1
+InC => R.IN1
+InC => R.IN1
+InC => OutC.IN1
+InC => OutC.IN1
+InC => R.IN1
+InC => R.IN1
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+OutC <= OutC.DB_MAX_OUTPUT_PORT_TYPE
+
+

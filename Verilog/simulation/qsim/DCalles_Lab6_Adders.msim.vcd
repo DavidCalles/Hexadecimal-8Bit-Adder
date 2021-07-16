@@ -1,0 +1,792 @@
+$comment
+	File created using the following command:
+		vcd file DCalles_Lab6_Adders.msim.vcd -direction
+$end
+$date
+	Thu Jul 15 10:03:24 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module DCalles_Lab6_Adders_vlg_vec_tst $end
+$var reg 1 ! activate $end
+$var reg 1 " clk $end
+$var reg 8 # input8 [7:0] $end
+$var reg 1 $ reset $end
+$var reg 1 % selector $end
+$var wire 1 & carryOut $end
+$var wire 1 ' memoryOut [15] $end
+$var wire 1 ( memoryOut [14] $end
+$var wire 1 ) memoryOut [13] $end
+$var wire 1 * memoryOut [12] $end
+$var wire 1 + memoryOut [11] $end
+$var wire 1 , memoryOut [10] $end
+$var wire 1 - memoryOut [9] $end
+$var wire 1 . memoryOut [8] $end
+$var wire 1 / memoryOut [7] $end
+$var wire 1 0 memoryOut [6] $end
+$var wire 1 1 memoryOut [5] $end
+$var wire 1 2 memoryOut [4] $end
+$var wire 1 3 memoryOut [3] $end
+$var wire 1 4 memoryOut [2] $end
+$var wire 1 5 memoryOut [1] $end
+$var wire 1 6 memoryOut [0] $end
+$var wire 1 7 segmentL1 [6] $end
+$var wire 1 8 segmentL1 [5] $end
+$var wire 1 9 segmentL1 [4] $end
+$var wire 1 : segmentL1 [3] $end
+$var wire 1 ; segmentL1 [2] $end
+$var wire 1 < segmentL1 [1] $end
+$var wire 1 = segmentL1 [0] $end
+$var wire 1 > segmentL2 [6] $end
+$var wire 1 ? segmentL2 [5] $end
+$var wire 1 @ segmentL2 [4] $end
+$var wire 1 A segmentL2 [3] $end
+$var wire 1 B segmentL2 [2] $end
+$var wire 1 C segmentL2 [1] $end
+$var wire 1 D segmentL2 [0] $end
+$var wire 1 E segmentR1 [6] $end
+$var wire 1 F segmentR1 [5] $end
+$var wire 1 G segmentR1 [4] $end
+$var wire 1 H segmentR1 [3] $end
+$var wire 1 I segmentR1 [2] $end
+$var wire 1 J segmentR1 [1] $end
+$var wire 1 K segmentR1 [0] $end
+$var wire 1 L segmentR2 [6] $end
+$var wire 1 M segmentR2 [5] $end
+$var wire 1 N segmentR2 [4] $end
+$var wire 1 O segmentR2 [3] $end
+$var wire 1 P segmentR2 [2] $end
+$var wire 1 Q segmentR2 [1] $end
+$var wire 1 R segmentR2 [0] $end
+$var wire 1 S segmentSumL [6] $end
+$var wire 1 T segmentSumL [5] $end
+$var wire 1 U segmentSumL [4] $end
+$var wire 1 V segmentSumL [3] $end
+$var wire 1 W segmentSumL [2] $end
+$var wire 1 X segmentSumL [1] $end
+$var wire 1 Y segmentSumL [0] $end
+$var wire 1 Z segmentSumR [6] $end
+$var wire 1 [ segmentSumR [5] $end
+$var wire 1 \ segmentSumR [4] $end
+$var wire 1 ] segmentSumR [3] $end
+$var wire 1 ^ segmentSumR [2] $end
+$var wire 1 _ segmentSumR [1] $end
+$var wire 1 ` segmentSumR [0] $end
+
+$scope module i1 $end
+$var wire 1 a gnd $end
+$var wire 1 b vcc $end
+$var wire 1 c unknown $end
+$var tri1 1 d devclrn $end
+$var tri1 1 e devpor $end
+$var tri1 1 f devoe $end
+$var wire 1 g input8[1]~input_o $end
+$var wire 1 h input8[2]~input_o $end
+$var wire 1 i input8[3]~input_o $end
+$var wire 1 j input8[4]~input_o $end
+$var wire 1 k input8[5]~input_o $end
+$var wire 1 l input8[6]~input_o $end
+$var wire 1 m input8[7]~input_o $end
+$var wire 1 n ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 o clk~input_o $end
+$var wire 1 p clk~inputCLKENA0_outclk $end
+$var wire 1 q reset~input_o $end
+$var wire 1 r input8[0]~input_o $end
+$var wire 1 s selector~input_o $end
+$var wire 1 t activate~input_o $end
+$var wire 1 u Memory16Bits1|DFF0|q~0_combout $end
+$var wire 1 v Memory16Bits1|DFF0|q~q $end
+$var wire 1 w Memory16Bits1|DFF8|q~0_combout $end
+$var wire 1 x Memory16Bits1|DFF8|q~q $end
+$var wire 1 y SevenSegmentsSumR|Decoder0~0_combout $end
+$var wire 1 z SevenSegmentsSumR|Decoder0~1_combout $end
+$var wire 1 { SevenSegmentsSumR|Decoder0~2_combout $end
+$var wire 1 | SevenSegmentsSumR|WideOr0~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+b1111000 #
+1$
+0%
+0&
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0=
+0<
+0;
+0:
+09
+08
+17
+0D
+0C
+0B
+0A
+0@
+0?
+1>
+0K
+0J
+0I
+0H
+0G
+0F
+1E
+0R
+0Q
+0P
+0O
+0N
+0M
+1L
+0Y
+0X
+0W
+0V
+0U
+0T
+1S
+0`
+0_
+0^
+0]
+0\
+0[
+1Z
+0a
+1b
+xc
+1d
+1e
+1f
+0g
+0h
+1i
+1j
+1k
+1l
+0m
+0n
+0o
+0p
+1q
+0r
+0s
+1t
+0u
+0v
+1w
+0x
+0y
+0z
+0{
+1|
+$end
+#10000
+1"
+1o
+1p
+1x
+1.
+1D
+1A
+1@
+1?
+1{
+1y
+1`
+1]
+1\
+1[
+#20000
+0"
+0o
+0p
+#30000
+1"
+1o
+1p
+#40000
+0"
+0o
+0p
+#50000
+1"
+1o
+1p
+#60000
+0"
+0o
+0p
+#70000
+1"
+1o
+1p
+#80000
+0"
+0o
+0p
+#90000
+1"
+1o
+1p
+#100000
+0"
+0o
+0p
+#110000
+0!
+1"
+0t
+1o
+1p
+0w
+#120000
+0"
+0o
+0p
+#130000
+1"
+1o
+1p
+0x
+0.
+0D
+0A
+0@
+0?
+0{
+0y
+0`
+0]
+0\
+0[
+#140000
+0"
+0o
+0p
+#150000
+1!
+1"
+1t
+1o
+1p
+1w
+#160000
+1%
+0"
+1s
+0o
+0p
+0w
+#170000
+1"
+1o
+1p
+#180000
+0"
+0o
+0p
+#190000
+b11111000 #
+b11101000 #
+b11100000 #
+b11100001 #
+1"
+1r
+0i
+0j
+1m
+1o
+1p
+#200000
+0"
+0o
+0p
+#210000
+1"
+1o
+1p
+#220000
+0"
+0o
+0p
+#230000
+1"
+1o
+1p
+#240000
+0"
+0o
+0p
+#250000
+1"
+1o
+1p
+#260000
+0"
+0o
+0p
+#270000
+0!
+1"
+0t
+1o
+1p
+#280000
+0"
+0o
+0p
+#290000
+1"
+1o
+1p
+#300000
+0"
+0o
+0p
+#310000
+1!
+1"
+1t
+1o
+1p
+#320000
+0%
+0"
+0s
+0o
+0p
+1u
+#330000
+1"
+1o
+1p
+1v
+16
+1R
+1O
+1N
+1M
+1{
+1y
+1`
+1]
+1\
+1[
+#340000
+0"
+0o
+0p
+#350000
+b10100001 #
+b10100101 #
+b10100111 #
+b100111 #
+b110111 #
+b111111 #
+1"
+1g
+1h
+1i
+1j
+0l
+0m
+1o
+1p
+#360000
+0$
+0"
+0q
+0o
+0p
+0u
+#370000
+1"
+1o
+1p
+0v
+06
+0R
+0O
+0N
+0M
+0{
+0y
+0`
+0]
+0\
+0[
+#380000
+0"
+0o
+0p
+#390000
+1"
+1o
+1p
+#400000
+1$
+0"
+1q
+0o
+0p
+1u
+#410000
+1"
+1o
+1p
+1v
+16
+1R
+1O
+1N
+1M
+1{
+1y
+1`
+1]
+1\
+1[
+#420000
+0"
+0o
+0p
+#430000
+0!
+1"
+0t
+1o
+1p
+0u
+#440000
+0"
+0o
+0p
+#450000
+1"
+1o
+1p
+0v
+06
+0R
+0O
+0N
+0M
+0{
+0y
+0`
+0]
+0\
+0[
+#460000
+0"
+0o
+0p
+#470000
+1!
+1"
+1t
+1o
+1p
+1u
+#480000
+1%
+0"
+1s
+0o
+0p
+0u
+#490000
+1"
+1o
+1p
+#500000
+0"
+0o
+0p
+#510000
+1"
+1o
+1p
+#520000
+b11111 #
+b11110 #
+0"
+0r
+0k
+0o
+0p
+#530000
+1"
+1o
+1p
+#540000
+0"
+0o
+0p
+#550000
+1"
+1o
+1p
+#560000
+0"
+0o
+0p
+#570000
+1"
+1o
+1p
+#580000
+0"
+0o
+0p
+#590000
+0!
+1"
+0t
+1o
+1p
+#600000
+0"
+0o
+0p
+#610000
+1"
+1o
+1p
+#620000
+0"
+0o
+0p
+#630000
+1!
+1"
+1t
+1o
+1p
+#640000
+0%
+0"
+0s
+0o
+0p
+1w
+#650000
+1"
+1o
+1p
+1x
+1.
+1D
+1A
+1@
+1?
+1{
+1y
+1`
+1]
+1\
+1[
+#660000
+0"
+0o
+0p
+#670000
+0$
+1"
+0q
+1o
+1p
+0w
+#680000
+0"
+0o
+0p
+#690000
+1"
+1o
+1p
+0x
+0.
+0D
+0A
+0@
+0?
+0{
+0y
+0`
+0]
+0\
+0[
+#700000
+0"
+0o
+0p
+#710000
+1"
+1o
+1p
+#720000
+0"
+0o
+0p
+#730000
+1"
+1o
+1p
+#740000
+0"
+0o
+0p
+#750000
+1"
+1o
+1p
+#760000
+0"
+0o
+0p
+#770000
+1"
+1o
+1p
+#780000
+1$
+0"
+1q
+0o
+0p
+1w
+#790000
+1"
+1o
+1p
+1x
+1.
+1D
+1A
+1@
+1?
+1{
+1y
+1`
+1]
+1\
+1[
+#800000
+1%
+0"
+1s
+0o
+0p
+#810000
+1"
+1o
+1p
+#820000
+0"
+0o
+0p
+#830000
+1"
+1o
+1p
+#840000
+0"
+0o
+0p
+#850000
+1"
+1o
+1p
+#860000
+0"
+0o
+0p
+#870000
+1"
+1o
+1p
+#880000
+0"
+0o
+0p
+#890000
+1"
+1o
+1p
+#900000
+0"
+0o
+0p
+#910000
+1"
+1o
+1p
+#920000
+0"
+0o
+0p
+#930000
+1"
+1o
+1p
+#940000
+0"
+0o
+0p
+#950000
+1"
+1o
+1p
+#960000
+0%
+0"
+0s
+0o
+0p
+#970000
+b11010 #
+b11000 #
+b1000 #
+b0 #
+1"
+0g
+0h
+0i
+0j
+1o
+1p
+#980000
+0"
+0o
+0p
+#990000
+1"
+1o
+1p
+#1000000
